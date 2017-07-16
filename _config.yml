@@ -1,4 +1,4 @@
-markdown: redcarpet
+markdown: kramdown
 permalink: /:title.html
 url: /blog3
 lsi: true
