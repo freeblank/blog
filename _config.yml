@@ -1,6 +1,6 @@
 markdown: kramdown
 permalink: /:title.html
-url: /blog
+url: /blog3
 lsi: true
 rouge: true
 safe: true
