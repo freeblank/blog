@@ -8,7 +8,6 @@ safe: true
 # presonal config
 title: likebeta's Blog
 feed: /atom.xml
-comments: disqus
 
 author:
   name: likebeta
