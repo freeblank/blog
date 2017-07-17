@@ -1,23 +1,23 @@
 markdown: kramdown
 permalink: /:title.html
-url: /blog3
+url: /blog
 lsi: true
 rouge: true
 safe: true
 
 # presonal config
-title: likebeta's Blog
+title: pcrazyc's Blog
 feed: /atom.xml
 comments: disqus
 
 author:
-  name: likebeta
-  nickname: likebeta
-  email: ixxoo.me@gmail.com
-  gmail: ixxoo.me@gmail.com
+  name: pcrazyc
+  nickname: pcrazyc
+  email: pcrazyc@gmail.com
+  gmail: pcrazyc@gmail.com
   qqmail: http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=GnZzcX94f257WmtrNHl1dw
   qqlist: http://list.qq.com/cgi-bin/qf_invite?id=eff06957927177ae5d491bb3c18e4a3c5fc328c95b6ae04f
-  site: https://www.ixxoo.me
+  site: https://pcrazyc.github.io/blog
 
 seo:
   keyword:

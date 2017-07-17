@@ -1,3 +1,3 @@
 #### home page
 
-It's my blog([http://blog.ixxoo.me](http://blog.ixxoo.me))
+It's my blog([https://pcrazyc.github.io/blog](https://pcrazyc.github.io/blog))

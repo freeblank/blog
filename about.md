@@ -29,11 +29,8 @@ Linux, C/C++, PHP, Javascript, Lua, Python, Redis
 
 #### 联系
 
-+ [github/likebeta](https://github.com/likebeta)
-+ [oschina/likebeta](http://git.oschina.net/likebeta)
-+ [gurudigger/likebeta](https://gurudigger.com/users/likebeta)
-+ [email/likebeta]({{site.author.qqmail}})
-+ [weibo/likebeta](http://weibo.com/likebeta)
++ [github/pcrazyc](https://github.com/pcrazyc)
++ [email/pcrazyc]({{site.author.qqmail}})
 
 #### avater
 
