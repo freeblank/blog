@@ -4,12 +4,11 @@ url: /blog3
 lsi: true
 rouge: true
 safe: true
-auto: true
-comments: true
 
 # presonal config
 title: likebeta's Blog
 feed: /atom.xml
+comments: disqus
 
 author:
   name: likebeta
@@ -23,7 +22,3 @@ author:
 seo:
   keyword:
   description:
-config:
-  js_dir:
-  img_dir:
-  css_dir:
