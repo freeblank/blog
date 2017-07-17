@@ -8,11 +8,7 @@ safe: true
 # presonal config
 title: likebeta's Blog
 feed: /atom.xml
----
-layout: default
-comments: true
-# other options
----
+comments: disqus
 
 author:
   name: likebeta
