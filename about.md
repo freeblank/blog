@@ -29,8 +29,8 @@ Linux, C/C++, PHP, Javascript, Lua, Python, Redis
 
 #### 联系
 
-+ [github/pcrazyc](https://github.com/pcrazyc)
-+ [email/pcrazyc]({{site.author.qqmail}})
++ [github/freeblank](https://github.com/freeblank)
++ [email/freeblank]({{site.author.qqmail}})
 
 #### avater
 

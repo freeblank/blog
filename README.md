@@ -1,3 +1,3 @@
 #### home page
 
-It's my blog([https://pcrazyc.github.io/blog](https://pcrazyc.github.io/blog))
+It's my blog([https://freeblank.github.io/blog](https://freeblank.github.io/blog))
