@@ -1,6 +1,6 @@
 markdown: kramdown
 permalink: /:title.html
-url: /blog
+url: freeblank.github.io
 lsi: true
 rouge: true
 safe: true
