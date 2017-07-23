@@ -212,4 +212,4 @@ class Solution
     };
 ```
 
-![](/media/img/median.png)
+![](./media/img/median.png)
