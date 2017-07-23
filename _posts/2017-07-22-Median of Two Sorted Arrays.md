@@ -11,11 +11,17 @@ date: "2017-07-22 17:06"
 
 ### Median
 > The median of a finite list of numbers can be found by arranging all the numbers from smallest to greatest.
+>
 > If there is an odd number of numbers, the middle one is picked. For example, consider the set of numbers
+>
 > 1, 3, 3, 6, 7, 8, 9
+>
 > This set contains seven numbers. The median is the fourth of them, which is 6.
+>
 > If there are an even number of observations, then there is no single middle value; the median is then usually defined to be the mean of the two middle values.[1][2] For example, in the data set
+>
 > 1, 2, 3, 4, 5, 6, 8, 9
+>
 > the median is the mean of the middle two numbers: this is (4 + 5) ÷ 2, which is 4.5.
 
 ### Example 1:
