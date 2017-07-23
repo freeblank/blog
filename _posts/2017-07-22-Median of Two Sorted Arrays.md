@@ -113,6 +113,12 @@ According to our analysts we will get some useful information
 - if you found MaxA1==MaxB1 or MinA2==MinB2, you are luck to find the answer.
 - as you divide the smaller array half by half, at last the new smaller array size will be 1. i think that will be the simple question.
 
+{% highlight ruby %}
+def foo
+  puts 'foo'
+end
+{% endhighlight %}
+
 
 ### Answer
 ```c
