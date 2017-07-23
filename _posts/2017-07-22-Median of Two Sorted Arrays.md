@@ -211,3 +211,5 @@ class Solution
         }
     };
 ```
+
+![](/media/img/median.png)
