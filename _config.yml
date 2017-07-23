@@ -2,8 +2,13 @@ markdown: kramdown
 permalink: /:title.html
 url: /blog
 lsi: true
-highlighter: rouge
+#highlighter: rouge
 safe: true
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
 
 # presonal config
 title: FreeBlank's Blog
