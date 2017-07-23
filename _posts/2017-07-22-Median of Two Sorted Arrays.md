@@ -115,7 +115,7 @@ According to our analysts we will get some useful information
 
 
 ### Answer
-```cpp
+```c
 class Solution
 {
     public:
