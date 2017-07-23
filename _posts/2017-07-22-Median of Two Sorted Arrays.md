@@ -8,6 +8,7 @@ date: "2017-07-22 17:06"
 > There are two sorted arrays arrayA and arrayB of size m and n respectively.
 >
 > Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
+<!--more-->
 
 ### Median
 > The median of a finite list of numbers can be found by arranging all the numbers from smallest to greatest.
@@ -51,7 +52,7 @@ date: "2017-07-22 17:06"
 Oh Shit! What the fuck question! i am just a stupid man which i just can answer the question like this
 
 > ArrayA = [10, 20]
-> 
+>
 > ArrayB = [30]
 
 ez, i found the answer is 20, great! i like this question, mom tolded me simple thing is always the best.
