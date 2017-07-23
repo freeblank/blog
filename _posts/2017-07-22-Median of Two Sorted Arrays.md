@@ -26,25 +26,32 @@ date: "2017-07-22 17:06"
 
 ### Example 1:
 > arrayA = [1, 3]
+>
 > arrayB = [2]
+>
 > The median is 2.0
 
 ### Example 2:
 > arrayA = [1, 2]
+>
 > arrayB = [3, 4]
+>
 > The median is (2 + 3)/2 = 2.5
 
 
 
 ### Means:
 > ArrayA = [A1, A2...Am], A1<A2<...<Am
+>
 > ArrayB = [B1, B2...Bn], B1<B2<...<Bn
+>
 > Findout the median number in ArrayA or ArrayB
 
 # Thinking
 Oh Shit! What the fuck question! i am just a stupid man which i just can answer the question like this
 
 > ArrayA = [10, 20]
+
 > ArrayB = [30]
 
 ez, i found the answer is 20, great! i like this question, mom tolded me simple thing is always the best.
@@ -52,6 +59,7 @@ ez, i found the answer is 20, great! i like this question, mom tolded me simple 
 but that's too simple, i need some challenge.
 
 > ArrayA = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110]
+>
 > ArryaB = [120, 130, 140, 150, 160]
 
 Aha! i found the answer is (80+90)/2 = 85 in seconds
@@ -79,11 +87,15 @@ So, i did the same thing step by step:
 >
 > as we know all of ArrayA1 is smaller than ArrayA2 and all of ArrayB1 is smaller than ArrayB2, if the total numbers in ArrayA and ArrayB1 is 8, compare the largest one called MaxA1 in ArrayA1 and called MaxB1 in ArrayB1
 > if MaxA1<MaxB1, MaxA1 will smaller than all of ArrayB2, the total numbers of ArrayA2 and ArrayB2 is 9, with MaxB2 there will be 10 numbers larger than MaxA1, so MaxA1 is at most the 7th, that means all of the ArrayA1 can't be the 8th, so we are successful in making all of the numbers in ArrayA1 dirty.
+>
 > if MaxA1>MaxB1, we will make all of the numbers in ArrayB1 dirty.
+>
 > if MaxA1==MaxB1, lucky boy, you find the 8th, and the 9th will be the smallest one in ArrayA2 and ArrayB2.
 >
 > otherwise all of ArrayA2 or ArrayB2 are dirty numbers by compare the smallest one called MinA2 in ArrayA2 and called MinB2 in ArrayB2, because they can't be the 9th.
+>
 > If we need make the total numbers in ArrayA1 and ArrayB1 is 8, we must divide half of the smaller Array to make sure.
+>
 > So, ArrayA will be divide into ArrayA1 = [10, 20, 30, 40, 50] and ArrayA2 = [60, 70, 80]
 5. compare the largest one in ArrayA1 and ArrayB1, 50<71, all of ArrayA1 are dirty numbers.
 6. compare the smallest one in ArrayB1 and ArrayB2, 60<81, all of ArrayB2 are dirty numbers.
