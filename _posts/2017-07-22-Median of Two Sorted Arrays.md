@@ -115,7 +115,7 @@ According to our analysts we will get some useful information
 
 
 # Answer
-{% highlight cpp %}
+{% highlight c++ %}
 class Solution
 {
     public:
