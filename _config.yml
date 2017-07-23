@@ -5,8 +5,9 @@ lsi: true
 #highlighter: rouge
 safe: true
 
+highlighter: rouge
+
 kramdown:
-  input: GFM
   syntax_highlighter: rouge
 
 
