@@ -40,7 +40,7 @@ date: "2017-07-22 17:06"
 
 
 
-### Means:
+### Means
 > ArrayA = [A1, A2...Am], A1<A2<...<Am
 >
 > ArrayB = [B1, B2...Bn], B1<B2<...<Bn

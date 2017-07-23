@@ -2,7 +2,7 @@ markdown: kramdown
 permalink: /:title.html
 url: /blog
 lsi: true
-rouge: true
+highlighter: rouge
 safe: true
 
 # presonal config
