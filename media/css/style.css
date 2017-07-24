@@ -1368,3 +1368,9 @@ padding-left:15px;
 #nprogress .bar {
     background: #40aa52;
 }
+
+.busuanzi #busuanzi_value_page_pv {
+float:right;
+color:#40aa52;
+font-weight:800;
+}
