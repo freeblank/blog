@@ -49,7 +49,7 @@ date: "2017-07-22 17:06"
 > Findout the median number in ArrayA or ArrayB
 
 ### Thinking
-Oh Shit! What the fuck question! i am just a stupid man which i just can answer the question like this
+Oh Shit! What the fuck question! i am just a stupid man who can just answer the question like this
 
 > ArrayA = [10, 20]
 >
