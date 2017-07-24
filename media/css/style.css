@@ -1372,6 +1372,7 @@ padding-left:15px;
 .busuanzi {
     font-family:Georgia,serif;
     float:right;
+    font-size:12px;
 }
 
 .busuanzi #busuanzi_value_page_pv {
