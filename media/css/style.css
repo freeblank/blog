@@ -1374,10 +1374,8 @@ padding-left:15px;
     float:right;
 }
 
-.busuanzi #common_text {
+.busuanzi .common_text {
     font-size:18px;
-    color:#40aa52;
-    font-weight:800;
 }
 
 .busuanzi #busuanzi_value_page_pv {
