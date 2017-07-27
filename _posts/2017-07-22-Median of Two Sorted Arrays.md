@@ -4,7 +4,7 @@ title: "Median of Two Sorted Arrays"
 date: "2017-07-22 17:06"
 ---
 
-### Question:
+# Question:
 > There are two sorted arrays arrayA and arrayB of size m and n respectively.
 >
 > Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
@@ -48,7 +48,7 @@ date: "2017-07-22 17:06"
 >
 > Findout the median number in ArrayA or ArrayB
 
-### Thinking
+# Thinking
 Oh Shit! What the fuck question! i am just a stupid man who can just answer the question like this
 
 > ArrayA = [10, 20]
@@ -113,7 +113,7 @@ According to our analysts we will get some useful information
 - if you found MaxA1==MaxB1 or MinA2==MinB2, you are luck to find the answer.
 - as you divide the smaller array half by half, at last the new smaller array size will be 1. i think that will be the simple question.
 
-### Answer
+# Answer
 ```cpp
 class Solution
 {

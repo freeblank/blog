@@ -338,6 +338,14 @@ height:28px;
 #comments #response{
 border-bottom:1px solid #ddd;
 }
+
+.post h1 {
+color:#40aa52;
+margin-top:8px;
+border-left:solid 5px #40aa52;
+padding-left:15px;
+}
+
 .post h3 {
 color:#40aa52;
 margin-top:8px;
