@@ -13,6 +13,7 @@ kramdown:
 
 # presonal config
 title: FreeBlank's Blog
+subtitle: create infinite bugs with limited life
 feed: /atom.xml
 comments: disqus
 
