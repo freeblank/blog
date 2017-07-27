@@ -339,15 +339,13 @@ height:28px;
 border-bottom:1px solid #ddd;
 }
 
-.post h1 {
+h1 {
 color:#40aa52;
-margin-top:8px;
-border-left:solid 5px #40aa52;
-padding-left:15px;
+font-size: 50px
 }
 
 .post h3 {
-color:#ff0000;
+color:#40aa52;
 margin-top:8px;
 border-left:solid 5px #40aa52;
 padding-left:15px;
