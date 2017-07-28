@@ -1,6 +1,6 @@
 markdown: kramdown
 permalink: /:title.html
-url: 
+url:
 lsi: true
 #highlighter: rouge
 safe: true
@@ -13,7 +13,6 @@ kramdown:
 
 # presonal config
 title: FreeBlank's Blog
-subtitle: create infinite bugs with limited life
 feed: /atom.xml
 comments: disqus
 
