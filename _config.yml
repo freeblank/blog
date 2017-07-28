@@ -1,6 +1,6 @@
 markdown: kramdown
 permalink: /:title.html
-url: /blog
+url: pcrazyc.top
 lsi: true
 #highlighter: rouge
 safe: true
