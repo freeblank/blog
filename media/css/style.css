@@ -165,10 +165,10 @@ margin-top:-200px;
 
 #header {
 position:relative;
-margin:20px 20px 0 20px;
+margin:40px 20px 0 20px;
 padding:0 0 20px 0;
 border-bottom:1px solid #ddd;
-height:60px;
+height:46px;
 }
 
 #blog_title{
@@ -204,10 +204,10 @@ margin-left:22px;
 
 #menu {
 color:black;
-margin:55px 5px 0 0;
+margin:25px 5px 0 0;
 text-shadow:none;
 overflow:hidden;
-height:20px;
+height:42px;
 float:right;
 }
 #menu ul{
