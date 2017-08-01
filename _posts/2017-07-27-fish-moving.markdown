@@ -33,6 +33,41 @@ as you know, straight line is too rigid, i want the fish more beautiful, so we w
 
 ![](./media/img/Lagrang1.svg)   ![](./media/img/Lagrang2.svg)
 
+```cpp
+Point LagrangeCurveMove::next(float delta) {
+    _calcPos.x = _curPos.x;
+    _calcPos.x += step*delta;
+
+    if ((_points[0].x-_points[_points.size()-1].x)*(_calcPos.x-_points[_points.size()-1].x)<=0) {
+        _prePos = _curPos;
+        _curPos = _points[_points.size()-1];
+
+        return _curPos;
+    }
+
+    _calcPos.y = 0;
+    float i_total_numerator = 1;
+    float k = _points.size();
+    for (int j=0; j<k; ++j) {
+        i_total_numerator *= (_calcPos.x-_points[j].x);
+    }
+
+    float i_total_denominator = 1;
+    for (int j=0; j<_points.size(); ++j) {
+        i_total_denominator = 1;
+        for (int i=0; i<_points.size(); ++i) {
+            if (i == j) continue;
+            i_total_denominator *= (_points[j].x-_points[i].x);
+        }
+        _calcPos.y += _points[j].y*i_total_numerator/(_calcPos.x-_points[j].x)/i_total_denominator;
+    }
+
+    return BaseMove::next(delta);
+}
+```
+
+![](./media/img/fish_lagrange.png)
+
 ### Bézier Curve
 there is another way to make smooth curve called Bézier curve, the different with Lagrange interpolation polynomial is the curve will not pass the points except the first and the last one. What's the matter, it's also very beautiful.
 
