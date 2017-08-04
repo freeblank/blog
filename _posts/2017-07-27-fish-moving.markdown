@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "Fish Move"
+title: "Fish Move By The Magic Mathematics"
 date: "2017-07-31 00:12"
 ---
 
@@ -123,9 +123,179 @@ Point BezierCurveMove::next(float delta) {
 ![](./media/img/fish_bezier.png)
 
 ### Parametric Equation
-if you know more about math, you will find parametric equation will make the fish move with a lot of magical paths.
+if you know more about math, you will find polar coordinate equation will make the fish move with a lot of magical paths. Here is some example:
 
-### Polar Coordinate Equation
-Another magical path can be create by polar coordinate equation.
+### Common Polar
 
-Mathematics is a magic, it can create more beautiful and magical path, you can do more, i just implement above at [Github FishMove](https://github.com/freeblank/fish_move), you can fork it and create more path
+```cpp
+bool PolarMove::setTotalTime(float time) {
+    if (!BaseMove::setTotalTime(time)) return false;
+
+    _step = 2*M_PI/_totalTime;
+    return true;
+}
+
+Point PolarMove::getPosByTheta(float theta) {
+    float r = getRadius(theta);
+    return Point(_origin.x+r*cosf(theta), _origin.y+r*sinf(theta));
+}
+
+Point PolarMove::next(float delta, bool fix) {
+    _theta += _step*delta;
+
+    _calcPos = getPosByTheta(_theta);
+
+    return BaseMove::next(delta, fix);
+}
+
+
+bool PolarMove::isEnd() {
+    return _theta >= 2*M_PI;
+}
+
+void PolarMove::setOrigin(cocos2d::Vec2 origin) {
+    _origin = origin;
+
+    _curPos = getPosByTheta(_theta);
+    _prePos = _curPos;
+}
+```
+
+### Archimedean Spiral
+
+![](./media/img/spiral.svg)
+
+```
+const float spiral_size = 12;
+
+bool SpiralMove::isEnd() {
+    return _theta >= 10*M_PI;
+}
+
+float SpiralMove::getRadius(float theta) {
+    return spiral_size*_theta;
+}
+```
+
+![](./media/img/fish_spiral.png)
+
+### Descartes's Love
+
+r=200*(1-sinθ)
+
+```cpp
+const float heart_size = 200;
+
+float HeartMove::getRadius(float theta) {
+    return heart_size*(1-sinf(_theta));
+}
+```
+
+![](./media/img/fish_heart.png)
+
+### Rose
+
+![](./media/img/rose.svg)
+
+```cpp
+const float rose_size = 350;
+
+float RoseMove::getRadius(float theta) {
+    return rose_size*sinf(theta*2);
+}
+```
+
+![](./media/img/fish_rose.png)
+
+### Lemniscate of Bernoulli
+
+![](./media/img/lemniscate.svg)
+
+```cpp
+float LemniscateMove::getRadius(float theta) {
+    return lemniscate_size*sqrtf(cosf(theta*2));
+}
+
+Point LemniscateMove::next(float delta, bool fix) {
+    _theta += _step*delta;
+
+    if (_theta >= 2*M_PI) {
+        _prePos = _curPos;
+        _curPos = _origin;
+
+        return _curPos;
+    }
+
+
+    if (_theta>=M_PI/4 && _theta<=M_PI*3/4) {
+        _calcPos = _origin;
+    } else {
+        _calcPos = getPosByTheta(_theta);
+    }
+
+    _curPos = BaseMove::next(delta, fix);
+
+    if (!fix) {
+        if (_theta>=M_PI/4 && _theta<=M_PI*3/4) {
+            if (_step > 0) {
+                _theta = M_PI*5/4;
+            } else {
+                _theta = M_PI*7/4;
+            }
+            _step *= -1;
+        }
+    }
+
+    return _curPos;
+}
+```
+
+![](./media/img/fish_lemniscate.png)
+
+### Angle
+
+Now we have create the paths, but the angle with fish which is not clear. One solution is to calculate derivative of the function which describes the director and speed of a position. Unfortunately sometimes the derivative is very hard to find out, it's the most accurate but not the best. So we need to know the real means with derivative is when you divide the path into several small pieces which you can't saw it with your eyes, connect the start position and end position will be the value of derivative, we don't need so accurate because fishes is moving you won't find out the defect, we get the position along the path step by step, so the angle will be calculate by each point and the next point.
+```cpp
+float BaseMove::getAngle() {
+    Point dir = Vec2(_curPos.x-_prePos.x, _curPos.y-_prePos.y);
+
+    // Translate to rotation of the fish
+    if (fabs(dir.x) < 0.0001) {
+        return dir.y>0 ? 90 : 270;
+    } else if (fabs(dir.y) < 0.0001) {
+        return dir.x>0 ? 0 : 180;
+    } else {
+        return (float)(atan2f(dir.y, dir.x)*180.0f/M_PI);
+    }
+}
+```
+
+### Uniform Motion
+
+If you make the fish move along the path, you will find the distance which fish move is not always the same step by step. you will get the answer like this: 10, 20, 80, 5, 21, it looks really bad. How can we make the fish move with uniform motion? Make the fish more slower if you found fish move too quick and otherwise more faster, what a simple answer it is! but how to do it.
+
+> Do you remember binary search? Yes the answer you know is if you find fish move too quick, make the fish go back half of the step, otherwise make the fish go forward, and then do again with the new step, several times you will make the fish move with uniform motion.
+
+```cpp
+const float move_dis_min = 2;
+const float move_dis_max = 5;
+
+Point BaseMove::next(float delta) {
+    float dis = (_calcPos.x-_curPos.x)*(_calcPos.x-_curPos.x) + (_calcPos.y-_curPos.y)*(_calcPos.y-_curPos.y);
+    if (fabsf(delta) > 0.0001) {
+        if (dis < move_dis_min) {
+            return next(0.5f * fabsf(delta), true);
+        } else if (dis > move_dis_max) {
+            return next(-0.5f * fabsf(delta), true);
+        }
+    }
+
+    _prePos = _curPos;
+    _curPos = _calcPos;
+    return _curPos;
+}
+```
+
+### Mathematics is a magic
+
+She can create more beautiful and magical path, i just implement above at [Github FishMove](https://github.com/freeblank/fish_move), you can fork it and create more path
