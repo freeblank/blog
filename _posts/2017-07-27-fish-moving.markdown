@@ -163,7 +163,7 @@ void PolarMove::setOrigin(cocos2d::Vec2 origin) {
 
 ### Archimedean Spiral
 
-![](./media/img/spiral.svg)
+r = 12*θ (0=<θ<10π)
 
 ```
 const float spiral_size = 12;
@@ -181,7 +181,7 @@ float SpiralMove::getRadius(float theta) {
 
 ### Descartes's Love
 
-r=200*(1-sinθ)
+r=200*(1-sinθ) (0=<θ<2π)
 
 ```cpp
 const float heart_size = 200;
@@ -195,7 +195,7 @@ float HeartMove::getRadius(float theta) {
 
 ### Rose
 
-![](./media/img/rose.svg)
+r = 350*sin2θ (0=<θ<2π)
 
 ```cpp
 const float rose_size = 350;
@@ -209,9 +209,11 @@ float RoseMove::getRadius(float theta) {
 
 ### Lemniscate of Bernoulli
 
-![](./media/img/lemniscate.svg)
+r^2 = 2500*cos(2θ) (0=<θ<2π)
 
 ```cpp
+const float lemniscate_size = 500;
+
 float LemniscateMove::getRadius(float theta) {
     return lemniscate_size*sqrtf(cosf(theta*2));
 }
@@ -252,7 +254,7 @@ Point LemniscateMove::next(float delta, bool fix) {
 
 ![](./media/img/fish_lemniscate.png)
 
-### Angle
+# Angle
 
 Now we have create the paths, but the angle with fish which is not clear. One solution is to calculate derivative of the function which describes the director and speed of a position. Unfortunately sometimes the derivative is very hard to find out, it's the most accurate but not the best. So we need to know the real means with derivative is when you divide the path into several small pieces which you can't saw it with your eyes, connect the start position and end position will be the value of derivative, we don't need so accurate because fishes is moving you won't find out the defect, we get the position along the path step by step, so the angle will be calculate by each point and the next point.
 ```cpp
@@ -270,7 +272,7 @@ float BaseMove::getAngle() {
 }
 ```
 
-### Uniform Motion
+# Uniform Motion
 
 If you make the fish move along the path, you will find the distance which fish move is not always the same step by step. you will get the answer like this: 10, 20, 80, 5, 21, it looks really bad. How can we make the fish move with uniform motion? Make the fish more slower if you found fish move too quick and otherwise more faster, what a simple answer it is! but how to do it.
 
@@ -296,6 +298,6 @@ Point BaseMove::next(float delta) {
 }
 ```
 
-### Mathematics is a magic
+# Mathematics is a magic
 
 She can create more beautiful and magical path, i just implement above at [Github FishMove](https://github.com/freeblank/fish_move), you can fork it and create more path
