@@ -165,7 +165,7 @@ void PolarMove::setOrigin(cocos2d::Vec2 origin) {
 
 r = 12*θ (0=<θ<10π)
 
-```
+```cpp
 const float spiral_size = 12;
 
 bool SpiralMove::isEnd() {
