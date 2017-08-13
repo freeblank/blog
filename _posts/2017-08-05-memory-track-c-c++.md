@@ -141,6 +141,7 @@ template<class T> inline T* operator&(const TraceInfo& trace_info, T* ptr) {
 ```
 
 now we can track the memory, we need use the macros to record, and if we don't need it, we need undefine the macros to make sure it won't affect other codes like c++ standard library.
+
 There is a test code here:
 
 ```cpp
@@ -173,7 +174,7 @@ int main(int argc, const char * argv[]) {
 }
 ```
 
-result
+result:
 ```cpp
 /Users/FreeBlank/Documents/GitHub/MemoryTrack/MemoryTrack/main.cpp:29		80
 
