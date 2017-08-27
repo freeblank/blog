@@ -10,6 +10,8 @@ Hey, the game crash again! it's iPhone9 the best mobile in the world, we need ma
 # Memory Track
 At first, you need to know who ate the memory and how much they have ate, you can get the answer with some tools which is very profession. At the point i want to discuss is how can we do it by myself, As we know the memory have been taken by stack, heap, static and so on, but most memory will be taken by heap, one solution is manage memory which you can get the answer by memory manager at the beginning at the game project. But now my project have almost done, we need to search all the codes to find the keys new and malloc to replace them. Unfortunately it's too hard to do the work, so we need find some solution to do it. Maybe we can use some macros?
 
+### Trace In C
+
 > Two standard C preprocessor macros are the key: the \__FILE__ and \__Line__ macros
 
 As we know you manage memory in C with three functions: malloc realloc free, so we need hake the functions:
@@ -56,6 +58,8 @@ void free_custom(void *ptr) {
     free(ptr);
 }
 ```
+
+### Trace In C++
 
 In C++ there are two operators: new and delete, we will hake and override them:
 
@@ -122,7 +126,9 @@ Object *ptr2 = new(ptr) Object();
 Object *ptr2 = new(__FILE__, __LINE__)(ptr) Object();
 ```
 
-At last we get the code clearly in error, if i just want to record the size, i will just need override operator new, but i need to record \__FILE__ and \__LINE__, how to replace replacement new like "new(ptr) Object()"? it's clearly that "new" must be the last word to make sure it compile successful. If the result of operator new can be an argument for a function, that will be make sense, The astute you will notice that we can define a class called "TrackInfo" store \__FILE__ and \__LINE__, an overloaded operator (like &,*,+,-, whatever it is) with the arguments "TrackInfo" and result of operator new, why not define an operator in "TraceInfo"? you will find the answer soon. Ah, there will be a new question? the type of result of operator new i don't know, so i need make the overloaded operator to a template function. if i define in "TraceInfo" which will be a template class, how can i make the macros! so the result will be:
+### Fix Replacement New
+
+At last we get the code clearly in error, if i just want to record the size, i will just need override operator new, but i need to record \__FILE__ and \__LINE__, how to fix replacement new like "new(ptr) Object()"? it's clearly that "new" must be the last word to make sure it compile successful. If the result of operator new can be an argument for a function, that will be make sense, The astute you will notice that we can define a class called "TrackInfo" store \__FILE__ and \__LINE__, an overloaded operator (like &,*,+,-, whatever it is) with the arguments "TrackInfo" and result of operator new, why not define an operator in "TraceInfo"? you will find the answer soon. Ah, there will be a new question? the type of result of operator new i don't know, so i need make the overloaded operator to a template function. if i define in "TraceInfo" which will be a template class, how can i make the macros! so the result will be:
 
 ```cpp
 class TraceInfo {
@@ -142,7 +148,7 @@ template<class T> inline T* operator&(const TraceInfo& trace_info, T* ptr) {
 
 now we can track the memory, we need use the macros to record, and if we don't need it, we need undefine the macros to make sure it won't affect other codes like c++ standard library.
 
-There is a test code here:
+### Test Code
 
 ```cpp
 int main(int argc, const char * argv[]) {
@@ -174,7 +180,8 @@ int main(int argc, const char * argv[]) {
 }
 ```
 
-result:
+### Result
+
 ```cpp
 /Users/FreeBlank/Documents/GitHub/MemoryTrack/MemoryTrack/main.cpp:29		80
 
