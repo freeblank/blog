@@ -40,9 +40,9 @@ ETC2 | 8
 S3TC_DXT1 | 4
 ATITC | 8
 
-In the majority of cases the art designer send you the images with extension("png" or "jpg"), the png images are compress with RGBA8888 and jpg compress with RGB888, you can convert them to other pixel format, or the texture will be the original. But we always convert the pixel format with source file except special requirement, because it affect the performance.
+In the majority of cases the art designer send you the images with extension("png" or "jpg"), the png images usually use with alpha channel and jpg is not, we always convert the pixel format with source file except special requirement, because it affect the performance.
 
-You can convert the pixel format with the tools "ImageMagick" and "TexturePacker" which are very excellent, they can also pack several images into a big image(you will know later), and some powerful function you will find. what pixel format should we use for our app? On my experience:
+You can convert the pixel format with the tools "ImageMagick" and "TexturePacker" which are very excellent, they can also pack several images into a big image(you will know later), and some powerful function you will find. which pixel format should we use for our app? On my experience:
 
 ### All Platform
 if the image need high visual aesthetics, like button, dialog, and so on with UI, RGBA8888 or RGB888 if without alpha will be the best choose, some images you are not sure and with small size, you can also use it. The image with whole screen size must be have your emphases attention, first check if there are many blank space with the image, were this to happen, divide the image into pieces to make sure with less blank space, try using RGBA4444 with dithering or RGB565 if without alpha, even using compress pixel format which we will discuss later. Textures for 3D models can be all right using RGB565, some effects can use RGBA4444 or RGB565, even compress pixel format, which have the reason your eyes will be cheat when the images are moving.
