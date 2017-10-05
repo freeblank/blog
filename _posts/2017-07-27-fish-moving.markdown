@@ -280,13 +280,13 @@ If you make the fish move along the path, you will find the distance which fish 
 
 ```cpp
 const float move_dis_min = 2;
-const float move_dis_max = 5;
+const float move_dis_max = 3;
 
-Point BaseMove::next(float delta) {
+Point BaseMove::next(float delta, bool fix) {
     float dis = (_calcPos.x-_curPos.x)*(_calcPos.x-_curPos.x) + (_calcPos.y-_curPos.y)*(_calcPos.y-_curPos.y);
     if (fabsf(delta) > 0.0001) {
         if (dis < move_dis_min) {
-            return next(0.5f * fabsf(delta), true);
+            return next((fix?0.5:1)*fabsf(delta), fix);
         } else if (dis > move_dis_max) {
             return next(-0.5f * fabsf(delta), true);
         }

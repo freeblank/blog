@@ -59,7 +59,7 @@ To make all clients with consistency, all the clients should receive the same co
 float accumulatedTime = 0.0f;
 float frameLength = 0.05f;
 float lastTime = -1.0f;
-//called once per unity frame
+
 void Update() {
     float curTime = now();
     if (lastTime < 0) lastTime = curTime;
