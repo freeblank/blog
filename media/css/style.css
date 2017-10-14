@@ -65,7 +65,8 @@ margin:0;
 }
 
 body,.hover {
-background: url(../img/background.jpg) repeat;
+background:#eeeeee;
+/*background: url(../img/background.jpg) repeat;*/
 }
 #menu ul .current a {
 color:#40aa52;
