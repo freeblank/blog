@@ -59,7 +59,7 @@ clear:both;
 body {
 line-height:180%;
 font-size:18px;
-font-family: 'Gentium Book Basic', 'Microsoft Yahei', serif;
+font-family: 'Assistant', sans-serif;
 text-align:center;
 color:#333;
 margin:0;
@@ -209,7 +209,7 @@ height:55px;
 overflow:hidden;
 display:block;
 line-height:52px;
-font-family: 'Gentium Book Basic', 'Microsoft Yahei', serif;
+font-family: 'Assistant', sans-serif;
 }
 
 #header #blog_title h1 b{
@@ -319,7 +319,7 @@ margin:10px 0 10px;
 .date {
 color:#333;
 text-transform:uppercase;
-font-family: 'Gentium Book Basic', 'Microsoft Yahei', serif;
+font-family: 'Assistant', sans-serif;
 font-weight:normal;
 text-shadow:1px 1px 0 #ddd;
 width:80px;
@@ -392,7 +392,7 @@ padding-left:15px;
 }
 
 .post .blue {
-font-family: 'Gentium Book Basic', 'Microsoft Yahei', serif;
+font-family: 'Assistant', sans-serif;
 white-space:pre-wrap;
 background-color:#eaf7ff;
 }
@@ -502,7 +502,7 @@ max-width:600px;
 }
 
 .post .con {
-font-family: 'Gentium Book Basic', 'Microsoft Yahei', serif;
+font-family: 'Assistant', sans-serif;
 color:#555;
 padding:18px 0 30px 0;
 }
@@ -601,7 +601,7 @@ padding: 0.5em 1em;
 margin: 1em 0;
 border: 1px solid #CCCCCC;
 background: #E2E2E2;
-font-family: 'Source Code Pro', monospace;
+font-family: 'Assistant', sans-serif;
 /*overflow: auto;
 max-height: 500px;*/
 line-height: 18px;
@@ -614,7 +614,7 @@ color:#666;
 list-style:none;
 font-size:12px;
 line-height:30px;
-font-family: 'Gentium Book Basic', 'Microsoft Yahei', serif;
+font-family: 'Assistant', sans-serif;
 margin:-10px auto 0 auto;
 text-align: center;
 }
@@ -849,7 +849,7 @@ padding:10px;
 overflow:auto;
 margin:0;
 line-height:17px;
-font-family: 'Gentium Book Basic', 'Microsoft Yahei', serif;
+font-family: 'Assistant', sans-serif;
 color:#222;
 +height:102px;
 +width:88%;
@@ -1030,13 +1030,13 @@ font-size:12px;
 width:100%;
 border:none;
 margin-top:2px;
-font-family: 'Gentium Book Basic', 'Microsoft Yahei', serif;
+font-family: 'Assistant', sans-serif;
 color:#fff;
 height: 22px;
 display: block;
 font-size: 12px;
 border: none;
-font-family: 'Gentium Book Basic', 'Microsoft Yahei', serif;
+font-family: 'Assistant', sans-serif;
 color: white;
 display: block;
 background: #959595;
@@ -1241,7 +1241,7 @@ padding-left:15px;
   background: none repeat scroll 0 0 #CC4F27;
   color: white;
   display: inline;
-  font-family: 'Gentium Book Basic', 'Microsoft Yahei', serif;
+  font-family: 'Assistant', sans-serif;
   font-size: 32px;
   height: 30px;
   letter-spacing: 3px;
@@ -1403,7 +1403,7 @@ padding-left:15px;
 }
 
 .avater pre {
-    font-family: 'Gentium Book Basic', 'Microsoft Yahei', serif;
+    font-family: 'Assistant', sans-serif;
     font-size: 9pt;
     margin: auto 10px;
     color: #40AA52;
@@ -1416,7 +1416,7 @@ padding-left:15px;
 }
 
 .busuanzi {
-    font-family: 'Gentium Book Basic', 'Microsoft Yahei', serif;
+    font-family: 'Assistant', sans-serif;
     float:right;
 }
 
