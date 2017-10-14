@@ -59,8 +59,7 @@ clear:both;
 body {
 line-height:180%;
 font-size:18px;
-font-family: 'Assistant', sans-serif;
-text-align:center;
+font-family: 'Alegreya Sans', sans-serif;text-align:center;
 color:#333;
 margin:0;
 }
@@ -209,8 +208,7 @@ height:55px;
 overflow:hidden;
 display:block;
 line-height:52px;
-font-family: 'Assistant', sans-serif;
-}
+font-family: 'Alegreya Sans', sans-serif;}
 
 #header #blog_title h1 b{
 background:#40aa52;
@@ -319,8 +317,7 @@ margin:10px 0 10px;
 .date {
 color:#333;
 text-transform:uppercase;
-font-family: 'Assistant', sans-serif;
-font-weight:normal;
+font-family: 'Alegreya Sans', sans-serif;font-weight:normal;
 text-shadow:1px 1px 0 #ddd;
 width:80px;
 height:30px;
@@ -392,8 +389,7 @@ padding-left:15px;
 }
 
 .post .blue {
-font-family: 'Assistant', sans-serif;
-white-space:pre-wrap;
+font-family: 'Alegreya Sans', sans-serif;white-space:pre-wrap;
 background-color:#eaf7ff;
 }
 
@@ -502,8 +498,7 @@ max-width:600px;
 }
 
 .post .con {
-font-family: 'Assistant', sans-serif;
-color:#555;
+font-family: 'Alegreya Sans', sans-serif;color:#555;
 padding:18px 0 30px 0;
 }
 
@@ -601,8 +596,7 @@ padding: 0.5em 1em;
 margin: 1em 0;
 border: 1px solid #CCCCCC;
 background: #E2E2E2;
-font-family: 'Assistant', sans-serif;
-/*overflow: auto;
+font-family: 'Alegreya Sans', sans-serif;/*overflow: auto;
 max-height: 500px;*/
 line-height: 18px;
 white-space:pre-wrap;
@@ -614,8 +608,7 @@ color:#666;
 list-style:none;
 font-size:12px;
 line-height:30px;
-font-family: 'Assistant', sans-serif;
-margin:-10px auto 0 auto;
+font-family: 'Alegreya Sans', sans-serif;margin:-10px auto 0 auto;
 text-align: center;
 }
 #comments ol.page-navigator {
@@ -849,8 +842,7 @@ padding:10px;
 overflow:auto;
 margin:0;
 line-height:17px;
-font-family: 'Assistant', sans-serif;
-color:#222;
+font-family: 'Alegreya Sans', sans-serif;color:#222;
 +height:102px;
 +width:88%;
 }
@@ -1030,14 +1022,12 @@ font-size:12px;
 width:100%;
 border:none;
 margin-top:2px;
-font-family: 'Assistant', sans-serif;
-color:#fff;
+font-family: 'Alegreya Sans', sans-serif;color:#fff;
 height: 22px;
 display: block;
 font-size: 12px;
 border: none;
-font-family: 'Assistant', sans-serif;
-color: white;
+font-family: 'Alegreya Sans', sans-serif;color: white;
 display: block;
 background: #959595;
 -moz-border-radius: 4px;
@@ -1241,8 +1231,7 @@ padding-left:15px;
   background: none repeat scroll 0 0 #CC4F27;
   color: white;
   display: inline;
-  font-family: 'Assistant', sans-serif;
-  font-size: 32px;
+  font-family: 'Alegreya Sans', sans-serif;  font-size: 32px;
   height: 30px;
   letter-spacing: 3px;
   line-height: 30px;
@@ -1403,8 +1392,7 @@ padding-left:15px;
 }
 
 .avater pre {
-    font-family: 'Assistant', sans-serif;
-    font-size: 9pt;
+    font-family: 'Alegreya Sans', sans-serif;    font-size: 9pt;
     margin: auto 10px;
     color: #40AA52;
     float: left;
@@ -1416,8 +1404,7 @@ padding-left:15px;
 }
 
 .busuanzi {
-    font-family: 'Assistant', sans-serif;
-    float:right;
+    font-family: 'Alegreya Sans', sans-serif;    float:right;
 }
 
 .busuanzi .common_text {
